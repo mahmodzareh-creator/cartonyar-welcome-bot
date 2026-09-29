@@ -13,7 +13,7 @@ from telegram.ext import (
     filters,
 )
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("BOT_TOKEN", "").strip()
 DB_PATH = os.getenv("DB_PATH", "kartonyar_welcome.db")
 
 DEFAULT_WELCOME = """👋 سلام {mention} عزیز، به گروه «{group}» خوش آمدید.
